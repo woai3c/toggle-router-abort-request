@@ -64,6 +64,7 @@ service.interceptors.response.use(res => {
     // 可以return res.data
     return res
 }, error => {
+    closeLoading()
     let errorFormat = {}
     const response = error.response
     // 请求已发出，但服务器响应的状态码不在 2xx 范围内
